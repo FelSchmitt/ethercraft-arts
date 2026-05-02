@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethercraft Arts</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="art-section">
+        <canvas class="canvas-outlined" id="card-drawing" width="512" height="704"></canvas>
+    </div>
+
+
+
+    <div class="art-section">
+        <canvas class="canvas-outlined" id="card-drawing-front" width="512" height="704"></canvas>
+
+        <div class="card-icon-images">
+            <div class="card-icon">
+                <img id="giant-serpent" src="./images/card-icon-images/giant-serpent.png" width="200">
+                <p>Giant Serpent</p>
+                <span>Resolution: 525 x 700</span>
+            </div>
+            <div class="card-icon">
+                <img id="wendigo" src="./images/card-icon-images/wendigo.png" width="250">
+                <p>Wendigo</p>
+                <span>Resolution: 1024 x 1024</span>
+            </div>
+            <div class="card-icon">
+                <img id="shadow-demon" src="./images/card-icon-images/shadow-demon.png" width="200">
+                <p>Shadow Demon</p>
+                <span>Resolution: 646 x 701</span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="art-section">
+        <canvas class="canvas-outlined" id="game-table" width="1280" height="720"></canvas>
+    </div>
+
+
+
+    <div class="art-section">
+        <canvas id="number-left-side" width="128" height="128" class="canvas-outlined"></canvas>
+        <canvas id="number-slash" width="80" height="128" class="canvas-outlined"></canvas>
+        <canvas id="number-right-side" width="128" height="128" class="canvas-outlined"></canvas>
+    </div>
+
+    <script src="scripts/common-card-front.js"></script>
+</body>
+
+</html>
