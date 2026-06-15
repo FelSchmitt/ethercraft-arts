@@ -141,17 +141,17 @@ drawing.textAlign = 'center'
 
 function writeCurved(x, y, distance, initialAngle, steps, letters, font) {
     drawing.save()
-    
+
     drawing.font = font
     drawing.fillStyle = 'black'
     drawing.translate(x, y)
     drawing.rotate(initialAngle)
-    
+
     steps.forEach((step, index) => {
         drawing.rotate(step)
         drawing.fillText(letters[index], 0, distance)
     })
-    
+
     drawing.restore()
 }
 
@@ -160,7 +160,7 @@ function writeCurved(x, y, distance, initialAngle, steps, letters, font) {
 
 //region Frame
 
-const image = document.getElementById('giant-serpent')
+const image = document.getElementById('shadow-demon')
 
 defaultShadow()
 
@@ -176,7 +176,7 @@ drawing.fill()
 
 drawing.save()
 
-drawing.fillStyle = grayPalette[18]
+drawing.fillStyle = grayPalette[14]
 drawing.beginPath()
 drawing.moveTo(436, 360)
 drawing.lineTo(76, 360)
@@ -186,7 +186,7 @@ drawing.arc(220, 220, 220, 4.8, 6.1)
 drawing.closePath()
 drawing.fill()
 drawing.clip()
-drawing.drawImage(image, 0, 0, 525, 700,   76, 0, 360, 360)//image of the character
+// drawing.drawImage(image, 0, 0, 646, 701,   76, 0, 360, 360)//image of the character
 
 drawing.restore()
 
@@ -213,7 +213,7 @@ drawing.shadowColor = 'transparent'
 
 
 //name of the character written on the banner
-writeCurved(256, 724, -345, -0.32, [0, 0.06, 0.05, 0.06, 0.06, 0.12, 0.06, 0.05, 0.06, 0.06, 0.06, 0.05], ['G', 'i', 'a', 'n', 't', 'S', 'e', 'r', 'p', 'e', 'n', 't'], '38px serif')
+writeCurved(256, 724, -345, -0.2, [0, 0.07, 0.07, 0.08, 0.05, 0.05, 0.06], ['(', 'e', 'm', 'p', 't', 'y', ')', 'e', 'm', 'o', 'n', 't'], '40px serif')
 
 
 
@@ -232,16 +232,16 @@ const font = new FontFace('cloisterblack', 'url(./fonts/cloister-black.ttf)')
 
 font.load().then(loadedFont => {//colored numbers of the card status values: health, attack and mana cost
     document.fonts.add(loadedFont)
-    
+
     drawing.fillStyle = '#ffbb00'
     drawing.font = '100px cloisterblack'
-    drawing.fillText('1', 120, 620)
+    drawing.fillText('0', 120, 620)
 
     drawing.fillStyle = '#ff3535'
     drawing.font = '150px cloisterblack'
-    drawing.fillText('5', 260, 550)
-    
+    drawing.fillText('0', 260, 550)
+
     drawing.fillStyle = '#13a400'
     drawing.font = '100px cloisterblack'
-    drawing.fillText('3', 395, 620)
+    drawing.fillText('0', 395, 620)
 })
